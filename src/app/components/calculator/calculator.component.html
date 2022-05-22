@@ -1,0 +1,17 @@
+<label for="">Enter the expression</label>
+<div class = "row">
+ <div class="col-sm-4">
+  <input type="text" class="form-control" id="name"
+  required
+  [(ngModel)]="expression" name="name">
+ </div>
+</div>
+<br>
+<div class = "row">
+  <div class="col-sm-4">
+  <button (click)="onSubmit()">submit</button>
+ </div>
+ <br>
+ <h3>{{result}}</h3>
+
+

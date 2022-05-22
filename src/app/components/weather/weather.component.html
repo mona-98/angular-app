@@ -1,0 +1,10 @@
+City:<br>
+  <input type="text" name="city" [(ngModel)]="city">
+  <br><br>
+  <button (click)="submit()">submit</button>
+  <div *ngIf="show">
+  <h3>{{city}}</h3>
+  <h3>{{temperature}}</h3>
+  <h3>{{conditions}}</h3>
+  </div>
+
