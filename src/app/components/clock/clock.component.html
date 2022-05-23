@@ -1,1 +1,7 @@
 <h3>{{time}}</h3>
+<select [(ngModel)]="selectedCountryId" (change)="onSelectCountry()">
+    <option value={{country.id}} *ngFor="let country of countries">{{country.name}}</option>
+</select>
+<select [(ngModel)]="selectedTimezone" (change)="onSelectTimezone()">
+    <option value={{timezone.name}} *ngFor="let timezone of timezones">{{timezone.name}}</option>
+</select>
