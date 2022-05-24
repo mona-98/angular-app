@@ -12,6 +12,27 @@
   <button (click)="onSubmit()">submit</button>
  </div>
  <br>
+ <br>
  <h3>{{result}}</h3>
 
+ <hr>
 
+
+
+<div>
+  <button (click)="toggleHistory()">Show/hide history</button>
+  <table class="table" *ngIf="showHistory">
+    <thead>
+      <tr>
+        <th>Expression</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of history">
+        <td>{{item.expression}}</td>
+        <td>{{item.result}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -8,12 +8,24 @@ import { Component, OnInit } from '@angular/core';
 export class CalculatorComponent implements OnInit {
   result ="";
   expression ="";
+  history = [];
+  showHistory: boolean = false;
   constructor() { }
   
   ngOnInit() {
   }
   onSubmit() {
-    alert(this.expression);
     this. result = eval(this.expression);
+    if (this.expression) {
+      let json = {
+        expression: this.expression,
+        result: this.result
+      }
+      this.history.push(json)
+    }
+  }
+
+  toggleHistory() {
+    this.showHistory = !this.showHistory
   }
 }

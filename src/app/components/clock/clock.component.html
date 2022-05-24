@@ -5,3 +5,4 @@
 <select [(ngModel)]="selectedTimezone" (change)="onSelectTimezone()">
     <option value={{timezone.name}} *ngFor="let timezone of timezones">{{timezone.name}}</option>
 </select>
+
